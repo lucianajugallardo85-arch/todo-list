@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+       name="description"
+       content="Aplicación estática para organizar tareas diarias"
+    />
+    <title>Mi Día | Lista de tareas</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <header class="app-header">
+        <p class="app-header__eyebrow">Organizador personal</p>
+        <h1> Mi Día</h1>
+        <p class="app-header_subtitle">
+            Organiza tus tareas, simplifica tu día.
+        </p>
+    </header>
+
+    <main class="app-main">
+    <section class="task-panel" aria-labelledby="task-panel-title">
+        <header class="task-panel__header">
+            <h2 id="task-panel-title">Mis tareas</h2>
+            <p>¿Qué necesitas hacer hoy?</p>
+        </header>
+
+        <form class="task-form">
+            <label for="new-task">Nueva tarea</label>
+
+            <div class="task-form__controls">
+                <input
+                    type="text"
+                    id="new-task"
+                    name="new-task"
+                    placeholder="Escribe una nueva tarea..."
+                    autocomplete="off"
+                />
+
+                <button type="submit">Añadir tarea</button>
+            </div>
+        </form>
+
+        <div class="task-summary" role="group" aria-label="Resumen de tareas">
+            <p><strong>5</strong> tareas</p>
+            <p><strong>3</strong> pendientes</p>
+            <p><strong>2</strong> completadas</p>
+        </div>
+
+        <nav class="task-filters" aria-label="Filtrar tareas">
+            <button type="button" class="task-filters__button task-filters__button--active">
+                Todas
+            </button>
+
+            <button type="button" class="task-filters__button">
+                Pendeintes
+            </button>
+
+            <button type="button" class="task-filters__button">
+                Completadas
+            </button>
+        </nav>
+
+        <ul class="task-list" aria-label="Lista de tareas">
+            <li class="task">
+                <input type="checkbox" id="task-1" />
+                <label for="task-1">Terminar el ejercicio de HTML</label>
+                <button type="button" aria-label="Eliminar: Terminar el ejercicio de HTML">
+                    Eliminar
+                </button>
+            </li>
+
+            <li class="task">
+                <input type="checkbox" id="task-2" checked/>
+                <label for="task-2">Revisar los apuntes de CSS</label>
+                <button type="button" aria-label="Eliminar: Revisar los apuntes de CSS">
+                    Eliminar
+                </button>
+            </li>
+
+            <li class="task">
+                <input type="checkbox" id="task-3"  />
+                <label for="task-3">Practicar Flexbox</label>
+                <button type="button" aria-label="Eliminar: Practicar Flexbox">
+                    Eliminar
+                </button>
+            </li>
+
+            <li class="task">
+                <input type="checkbox" id="task-4"  />
+                <label for="task-4">Preparar la clase de JavaScript</label>
+                <button type="button" aria-label="Eliminar: Preparar la clase de JavaScript">
+                    Eliminar
+                </button>
+            </li>
+
+            <li class="task">
+                <input type="checkbox" id="task-5" checked  />
+                <label for="task-5">Organizar el portafolio</label>
+                <button type="button" aria-label="Eliminar: Organizar el portafolio">
+                    Eliminar
+                </button>
+            </li>
+        </ul>
+
+        <div class="task-actions">
+            <button type="button" class="button button--secondary">
+                Eliminar completadas
+            </button>
+
+            <button type="button" class="button button--danger">
+                Eliminar todas
+            </button>
+        </div>
+    </section>
+</main>
+
+<footer class="app-footer">
+    <p>Mi Día . Organiza hoy, avanza mañana.</p>
+</footer>
+     
+</body>
+</html>
