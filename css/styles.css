@@ -286,7 +286,7 @@ body {
     cursor: pointer;
 }
 
-.task.label {
+.task label {
     line-height: 1.4;
     cursor: pointer;
 }
@@ -308,7 +308,7 @@ body {
     cursor: pointer;
 }
 
-.task button :hover {
+.task button:hover {
     color: #ffffff;
     background-color: var(--color-danger);
     border-color: var(--color-danger);
@@ -428,5 +428,13 @@ body {
 
     .button {
         width: auto;
+    }
+
+    .task--completed {
+        opacity: 0.6;
+    }
+
+    .task--completed label {
+        text-decoration: line-through;
     }
 }
